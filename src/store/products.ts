@@ -8,7 +8,7 @@ export const useProductsStore = defineStore('products', {
   }),
   actions: {
     async fetchData() {
-      const respone = await axios.get('https://vue-pagination-b8d64-default-rtdb.firebaseio.com/products.json');
+      const respone = await axios.get('src/assets/db.json');
       const data = await respone.data;
       this.products = data.products;
     }
